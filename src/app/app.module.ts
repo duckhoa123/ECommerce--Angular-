@@ -3,14 +3,25 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ProductListComponent } from './products/product-list/product-list.component';
+import { CartComponent } from './cart/cart.component';
+import { NavComponent } from './nav/nav.component';
+import { ProductItemComponent } from './products/product-item/product-item.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    CartComponent,
+    NavComponent,
+    ProductListComponent,
+    ProductItemComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule
+   
   ],
   providers: [
     provideClientHydration()
