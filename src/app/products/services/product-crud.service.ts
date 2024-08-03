@@ -14,6 +14,6 @@ export class ProductCrudService {
     return data;
   }
   getProduct(id:number){
-    return data[id];
+    return data[id-1];
   }
 }

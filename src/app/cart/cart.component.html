@@ -1,1 +1,17 @@
-<h1>cart works!</h1>
+<div class="cart-container">
+    <div class="cart-panel">
+        <div *ngFor="let product of productList" class="cart-item">
+            <img src="{{product.url}}" class="product-image">
+            <div  class="cart-item-details">
+                <p class="form-margin">{{product.name}}</p>
+                <p class="form-margin">${{product.price}}</p>
+                <input type="number" class="number-input" value={{product.amount}} (change)="onChange($event,product.id)" min="0" max="10" >
+            </div>
+            
+       </div>
+    </div>
+    <h1>Total: ${{total}}</h1>
+
+</div>
+<app-user [total]="total"></app-user>
+

@@ -8,6 +8,9 @@ import { CartComponent } from './cart/cart.component';
 import { NavComponent } from './nav/nav.component';
 import { ProductItemComponent } from './products/product-item/product-item.component';
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { UserComponent } from './user/user.component';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +18,15 @@ import { RouterModule } from '@angular/router';
     CartComponent,
     NavComponent,
     ProductListComponent,
-    ProductItemComponent
+    ProductItemComponent,
+    UserComponent,
+    ConfirmationComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule,
+    FormsModule
    
   ],
   providers: [

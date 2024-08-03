@@ -1,0 +1,17 @@
+<h1>Create a blog post</h1>
+
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+  <label>Full name</label>
+  <br>
+  <input type="text" name="fullname" [(ngModel)]="fullname" required minlength="3">
+  <br>
+  <label>Address</label>
+  <br>
+  <input type="text" name="address" [(ngModel)]="address" required minlength="6">
+  <br>
+  <label>Credit card number</label>
+  <br>
+  <input type="text" [(ngModel)]="card" [(ngModel)]="card" required pattern="\d{16}" maxlength="16">
+  <br>
+  <button type="submit" [disabled]="form.invalid">Submit</button>
+</form>
